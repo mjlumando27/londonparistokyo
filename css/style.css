@@ -1,0 +1,387 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+.nav-button.active {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+/* Content Area */
+.content-area {
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.welcome-content {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.welcome-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-content p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.welcome-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Cities Container */
+.cities-container {
+    display: none;
+}
+
+.cities-container.active {
+    display: block;
+}
+
+.single-city {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.city-info {
+    padding: 0;
+}
+
+.city-info h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.city-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.city-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid #667eea;
+}
+
+.stat-item h4 {
+    color: #667eea;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* City Card Styles */
+.city-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.city-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.city-content {
+    padding: 2rem;
+}
+
+.city-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.city-details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.city-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.city-details strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.landmarks h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.landmarks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.landmarks li {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.landmarks li:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-button {
+        width: 200px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .single-city {
+        max-width: 100%;
+    }
+    
+    .welcome-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .city-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .cities-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .city-content {
+        padding: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .city-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .city-image {
+        height: 200px;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.city-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.city-card:nth-child(1) { animation-delay: 0.1s; }
+.city-card:nth-child(2) { animation-delay: 0.2s; }
+.city-card:nth-child(3) { animation-delay: 0.3s; }
